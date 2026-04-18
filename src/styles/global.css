@@ -1,0 +1,67 @@
+:root {
+  --color-primary: #002147;
+  --color-secondary: #707070;
+  --color-accent: #b22222; /* Red accent for urgency/buttons like original */
+  --color-white: #ffffff;
+  --color-light: #f4f4f4;
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: #333;
+  background-color: var(--color-white);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #900;
+}
+
+.section-padding {
+  padding: 80px 0;
+}

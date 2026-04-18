@@ -1,0 +1,69 @@
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-secondary);
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.company-card {
+  background: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image-placeholder {
+  height: 180px;
+  background-color: var(--color-light);
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.location {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.visit-link {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-primary);
+}
+
+.visit-link:hover {
+  text-decoration: underline;
+}

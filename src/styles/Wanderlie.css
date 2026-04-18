@@ -1,0 +1,93 @@
+.wanderlie {
+  background-color: #fdfaf4; /* Soft cream background */
+}
+
+.wanderlie-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.wanderlie-text {
+  flex: 1;
+}
+
+.wanderlie-tag {
+  display: inline-block;
+  color: #c5a059;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.wanderlie h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  text-transform: none; /* More elegant serif-like feel */
+  color: #2c2416;
+}
+
+.wanderlie p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.wanderlie-features {
+  margin-bottom: 40px;
+}
+
+.wanderlie-features li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #444;
+}
+
+.wanderlie-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #c5a059;
+  font-weight: 900;
+}
+
+.btn-gold {
+  background-color: #c5a059;
+  color: white;
+}
+
+.btn-gold:hover {
+  background-color: #a68545;
+}
+
+.wanderlie-image {
+  flex: 1;
+}
+
+.image-placeholder {
+  width: 100%;
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+  background-color: #e8e1d2;
+  position: relative;
+}
+
+.gold-border {
+  border: 10px solid #c5a059;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+  .wanderlie-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .wanderlie-features {
+    display: inline-block;
+    text-align: left;
+  }
+}
