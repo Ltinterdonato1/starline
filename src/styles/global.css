@@ -23,7 +23,6 @@ body {
 
 h1, h2, h3, h4 {
   font-weight: 700;
-  text-transform: uppercase;
   color: var(--color-primary);
 }
 
@@ -60,6 +59,26 @@ ul {
 
 .btn-primary:hover {
   background-color: #900;
+}
+
+.btn-gold {
+  background-color: #c5a059;
+  color: var(--color-white);
+}
+
+.btn-gold:hover {
+  background-color: #b08d4a;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  border: 2px solid #c5a059;
+  color: #c5a059;
+}
+
+.btn-outline-gold:hover {
+  background-color: #c5a059;
+  color: white;
 }
 
 .section-padding {

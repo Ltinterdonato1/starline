@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import '../styles/Wanderlie.css';
+import whyUsBus from '../assets/whyusbus.webp';
 
 const Wanderlie = () => {
   return (
@@ -6,22 +8,22 @@ const Wanderlie = () => {
       <div className="container wanderlie-container">
         <div className="wanderlie-text">
           <span className="wanderlie-tag">Wanderlie Events</span>
-          <h2>Elegant Transportation for Your Special Day</h2>
+          <h2>YOUR SEAT TO ADVENTURE!</h2>
           <p>
-            From weddings and gala events to corporate retreats and private parties, 
-            Wanderlie provides the sophisticated touch your occasion deserves. 
-            Experience the gold standard in event transportation.
+            Safe, reliable, and hassle-free transportation for major events. 
+            Enjoy your next big adventure by eliminating common travel stressors 
+            like parking and night driving with premiere curbside service.
           </p>
           <ul className="wanderlie-features">
-            <li>Customized Itineraries</li>
-            <li>On-site Event Coordinators</li>
-            <li>Luxury Vehicle Options</li>
-            <li>Premium Amenities</li>
+            <li>Festivals & Music Concerts</li>
+            <li>Sporting Events</li>
+            <li>Hops & Brews Tours</li>
+            <li>WSU Back Home Bus</li>
           </ul>
-          <button className="btn btn-gold">Inquire for Your Event</button>
+          <Link to="/wanderlie-events" className="btn btn-gold">View All Events</Link>
         </div>
         <div className="wanderlie-image">
-          <div className="image-placeholder gold-border"></div>
+          <img src={whyUsBus} alt="Wanderlie Adventure Bus" className="hero-bus-img" />
         </div>
       </div>
     </section>

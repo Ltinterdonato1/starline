@@ -68,6 +68,17 @@
   flex: 1;
 }
 
+.hero-bus-img {
+  width: 85%;
+  height: 350px; /* Fixed height prevents vertical stretching */
+  object-fit: cover; /* Crops the image instead of stretching it */
+  border-radius: 12px;
+  border: 2px solid #c5a059;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: block;
+  margin-left: auto;
+}
+
 .image-placeholder {
   width: 100%;
   padding-top: 75%; /* 4:3 Aspect Ratio */
