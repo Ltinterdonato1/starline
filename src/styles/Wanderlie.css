@@ -1,15 +1,19 @@
 .wanderlie {
-  background-color: #fdfaf4; /* Soft cream background */
+  background-color: #2c2416;
+  text-align: center;
+  color: white;
 }
 
 .wanderlie-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 60px;
+  min-height: 400px;
 }
 
-.wanderlie-text {
-  flex: 1;
+.wanderlie-text-centered {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .wanderlie-tag {
@@ -23,28 +27,30 @@
 }
 
 .wanderlie h2 {
-  font-size: 40px;
+  font-size: 48px;
   margin-bottom: 25px;
-  text-transform: none; /* More elegant serif-like feel */
-  color: #2c2416;
+  text-transform: uppercase;
 }
 
 .wanderlie p {
-  font-size: 18px;
-  color: #555;
+  font-size: 20px;
   margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .wanderlie-features {
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .wanderlie-features li {
   position: relative;
   padding-left: 25px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  color: #444;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .wanderlie-features li::before {
@@ -55,50 +61,27 @@
   font-weight: 900;
 }
 
-.btn-gold {
-  background-color: #c5a059;
-  color: white;
+.text-white {
+  color: white !important;
 }
 
-.btn-gold:hover {
-  background-color: #a68545;
-}
-
-.wanderlie-image {
-  flex: 1;
-}
-
-.hero-bus-img {
-  width: 85%;
-  height: 350px; /* Fixed height prevents vertical stretching */
-  object-fit: cover; /* Crops the image instead of stretching it */
-  border-radius: 12px;
-  border: 2px solid #c5a059;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  display: block;
-  margin-left: auto;
-}
-
-.image-placeholder {
-  width: 100%;
-  padding-top: 75%; /* 4:3 Aspect Ratio */
-  background-color: #e8e1d2;
-  position: relative;
-}
-
-.gold-border {
-  border: 10px solid #c5a059;
-  border-radius: 4px;
-}
-
-@media (max-width: 992px) {
-  .wanderlie-container {
-    flex-direction: column;
-    text-align: center;
+@media (max-width: 768px) {
+  .wanderlie h2 {
+    font-size: 32px;
   }
   
   .wanderlie-features {
-    display: inline-block;
-    text-align: left;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .wanderlie-features li {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .wanderlie-features li::before {
+    display: none;
   }
 }

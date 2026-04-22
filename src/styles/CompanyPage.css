@@ -1,7 +1,8 @@
 .company-hero {
   min-height: 500px;
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -909,5 +910,51 @@
 @media (max-width: 600px) {
   .event-slide-item {
     flex: 0 0 100%;
+  }
+
+  /* Wanderlie Events Mobile Specifics */
+  .wanderlie-page .company-hero {
+    height: auto !important;
+    min-height: 300px !important;
+    aspect-ratio: 16 / 9;
+    background-size: cover !important;
+  }
+
+  .wanderlie-page h2 {
+    font-size: 28px !important;
+  }
+
+  .wanderlie-page .split-layout {
+    grid-template-columns: 1fr;
+    gap: 40px !important;
+    text-align: center;
+  }
+
+  .wanderlie-page .text-content {
+    text-align: center !important;
+  }
+
+  .wanderlie-page .location-list li {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .event-type-card {
+    grid-column: span 1 !important;
+  }
+
+  .wanderlie-page .story-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+  }
+
+  .wanderlie-page .gallery-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+    .wanderlie-page .story-grid {
+    grid-template-columns: 1fr !important;
   }
 }

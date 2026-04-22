@@ -169,7 +169,7 @@ const WanderlieEvents = () => {
   return (
     <div className="company-page wanderlie-page">
       {/* Hero Section */}
-      <section className="company-hero" style={{ backgroundImage: `url(${heroImg})`, height: '70vh', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <section className="company-hero" style={{ backgroundImage: `url(${heroImg})`, height: '70vh', backgroundPosition: 'center' }}>
       </section>
 
       {/* Adventure Mission Section */}
