@@ -1129,7 +1129,7 @@
   }
 
   .wanderlie-page .story-grid {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr !important; /* Force 2 columns */
     gap: 15px !important;
   }
 
