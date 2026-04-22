@@ -1,16 +1,13 @@
 import '../styles/CompanyPage.css';
 import careersHero from '../assets/Wheatland-express2.jpg';
-import daneCaylaImg from '../assets/Dane-Cayla.png';
-import bus1 from '../assets/bus1.jpg';
-import bus2 from '../assets/bus2.jpg';
-import bus3 from '../assets/bus3.jpg';
-import bus4 from '../assets/bus4.jpg';
-import bus5 from '../assets/bus5.jpg';
-import bus6 from '../assets/bus6.jpg';
-import bus7 from '../assets/bus7.jpg';
-import bus8 from '../assets/bus8.jpg';
+import teamPhoto from '../assets/Careers/TeamPhoto1.jpeg';
 
-const busGallery = [bus1, bus2, bus3, bus4, bus5, bus6, bus7, bus8];
+// New Careers Gallery Images
+import lraeHopkins from '../assets/Careers/L\'Rae_Hopkins.jpg';
+import marryImg from '../assets/Careers/Marry.jpg';
+import skittlesImg from '../assets/Careers/skittles.jpg';
+
+const busGallery = [lraeHopkins, marryImg, skittlesImg];
 
 const Careers = () => {
   return (
@@ -41,9 +38,9 @@ const Careers = () => {
                 </ul>
               </div>
             </div>
-            <div className="team-image-container">
-              <img src={daneCaylaImg} alt="Dane and Cayla" className="team-photo" />
-              <div className="photo-caption">Dane & Cayla - Part of the Starline Family</div>
+            <div className="team-image-container" style={{ marginTop: '40px' }}>
+              <img src={teamPhoto} alt="Starline Team" className="team-photo" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+              <div className="photo-caption">The Starline Collection Team</div>
             </div>
           </div>
 
@@ -70,47 +67,12 @@ const Careers = () => {
       <section className="section-padding bg-light" style={{ paddingTop: '40px' }}>
         <div className="container">
           <h2 className="section-title text-center mb-5">THE NORTHWEST'S FINEST FLEET</h2>
-          <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+          <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
             {busGallery.map((img, index) => (
               <div key={index} className="gallery-item">
-                <img src={img} alt={`Starline Fleet Bus ${index + 1}`} />
+                <img src={img} alt={`Starline Fleet ${index + 1}`} />
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-light" style={{ paddingTop: '20px' }}>
-        <div className="container">
-          <h2 className="section-title text-center mb-5">WHY WE DRIVE</h2>
-          <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-            <div className="video-container" style={{ paddingBottom: '56.25%', height: 0 }}>
-              <iframe 
-                src="https://www.youtube.com/embed/1mQBsHCZBB8" 
-                title="Why I Drive 1" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="video-container" style={{ paddingBottom: '56.25%', height: 0 }}>
-              <iframe 
-                src="https://www.youtube.com/embed/8YM9-_KAXNc" 
-                title="Why I Drive 2" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="video-container" style={{ paddingBottom: '56.25%', height: 0 }}>
-              <iframe 
-                src="https://www.youtube.com/embed/dCa5svJqTHA" 
-                title="Why I Drive 3" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
           </div>
         </div>
       </section>

@@ -247,7 +247,7 @@ const VacationExpress = () => {
                   <table className="schedule-table">
                     <thead>
                       <tr>
-                        <th>ARLINGTON (Walmart)</th><th>MOUNTLAKE TERRACE</th><th>PULLMAN (Admin)</th><th>MOSCOW (U of I)</th>
+                        <th>ARLINGTON (Walmart)</th><th>MOUNTLACE TERRACE</th><th>PULLMAN (Admin)</th><th>MOSCOW (U of I)</th>
                       </tr>
                       <tr className="sub-header">
                         <th>Arr | Dep</th><th>Arr | Dep</th><th>Arr | Dep</th><th>Arr | Dep</th>
@@ -266,11 +266,11 @@ const VacationExpress = () => {
                 <div className="table-responsive">
                   <table className="schedule-table">
                     <tbody>
-                      <tr className="sub-header"><th colspan="4">Tacoma Route</th></tr>
-                      <tr><td>TACOMA (Foss) 8:40 AM | 9:00 AM</td><td colspan="2">PULLMAN (Admin) 3:15 PM | 3:35 PM</td><td>MOSCOW (U of I) 4:00 PM</td></tr>
-                      <tr className="sub-header"><th colspan="4">Bellevue Route 1</th></tr>
+                      <tr className="sub-header"><th colSpan={4}>Tacoma Route</th></tr>
+                      <tr><td>TACOMA (Foss) 8:40 AM | 9:00 AM</td><td colSpan={2}>PULLMAN (Admin) 3:15 PM | 3:35 PM</td><td>MOSCOW (U of I) 4:00 PM</td></tr>
+                      <tr className="sub-header"><th colSpan={4}>Bellevue Route 1</th></tr>
                       <tr><td>BELLEVUE (Factoria) 8:40 AM | 9:00 AM</td><td>ELLENSBURG 11:15 AM | 11:30 AM</td><td>PULLMAN 3:20 PM | 3:40 PM</td><td>MOSCOW 4:00 PM</td></tr>
-                      <tr className="sub-header"><th colspan="4">Bellevue Route 2</th></tr>
+                      <tr className="sub-header"><th colSpan={4}>Bellevue Route 2</th></tr>
                       <tr><td>BELLEVUE (Factoria) 9:10 AM | 9:30 AM</td><td>ELLENSBURG 11:45 AM | 12:00 PM</td><td>PULLMAN 3:50 PM | 4:10 PM</td><td>MOSCOW 4:30 PM</td></tr>
                     </tbody>
                   </table>
@@ -280,7 +280,9 @@ const VacationExpress = () => {
 
             <div className="text-center mt-5">
               <p className="highlight-text mb-3">Reservations Required</p>
-              <button className="btn btn-primary btn-lg">Reserve Now!</button>
+              <a href="https://express.starlinecollection.com/?group=vacationexpress" target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-primary btn-lg">Reserve Now!</button>
+              </a>
             </div>
           </div>
         </div>

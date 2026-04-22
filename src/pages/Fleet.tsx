@@ -1,29 +1,45 @@
 import { useState } from 'react';
 import '../styles/CompanyPage.css';
-import mini1Img from '../assets/mini-1.jpg';
-import midImg from '../assets/Starline.jpg';
-import img40_1 from '../assets/40-1.jpg';
-import img40_2 from '../assets/40-2.jpg';
-import img40_3 from '../assets/40-3.jpg';
-import img40_4 from '../assets/40-4.jpg';
-import img40_5 from '../assets/40-5.jpg';
-import img40_6 from '../assets/40-6.jpg';
-import img40_7 from '../assets/40-7.jpg';
-import img40_8 from '../assets/40-8.jpg';
+import mini1Img from '../assets/16-24_PassCoach/mini-1.jpg';
+import mini2Img from '../assets/16-24_PassCoach/mini-2.jpg';
+import mini3Img from '../assets/16-24_PassCoach/mini-3.jpg';
+import mini4Img from '../assets/16-24_PassCoach/mini-4.jpg';
 
-import img56_1 from '../assets/56-1.jpg';
-import img56_2 from '../assets/56-2.jpg';
-import img56_3 from '../assets/56-3.jpg';
-import img56_4 from '../assets/56-4.jpg';
-import img56_5 from '../assets/56-5.jpg';
-import img56_6 from '../assets/56-6.jpg';
+import img40_1 from '../assets/40_PassCoach/40-1.jpg';
+import img40_2 from '../assets/40_PassCoach/40-2.jpg';
+import img40_3 from '../assets/40_PassCoach/40-3.jpg';
+import img40_4 from '../assets/40_PassCoach/40-4.jpg';
+import img40_5 from '../assets/40_PassCoach/40-5.jpg';
+import img40_6 from '../assets/40_PassCoach/40-6.jpg';
+import img40_7 from '../assets/40_PassCoach/40-7.jpg';
+import img40_8 from '../assets/40_PassCoach/40-8.jpg';
 
+// New 56 Pass Coach Images
+import bus1 from '../assets/56_PassCoach/bus1.jpg';
+import bus2 from '../assets/56_PassCoach/bus2.jpg';
+import bus3 from '../assets/56_PassCoach/bus3.jpg';
+import bus4 from '../assets/56_PassCoach/bus4.jpg';
+import bus5 from '../assets/56_PassCoach/bus5.jpg';
+import bus6 from '../assets/56_PassCoach/bus6.jpg';
+import bus7 from '../assets/56_PassCoach/bus7.jpg';
+import bus8 from '../assets/56_PassCoach/bus8.jpg';
+
+const miniGallery = [mini1Img, mini2Img, mini3Img, mini4Img];
 const midGallery = [img40_8, img40_1, img40_2, img40_3, img40_4, img40_5, img40_6, img40_7];
-const motorcoachGallery = [img56_6, midImg, img56_1, img56_2, img56_3, img56_4, img56_5];
+const motorcoachGallery = [bus1, bus2, bus3, bus4, bus5, bus6, bus7, bus8];
 
 const Fleet = () => {
+  const [currentMiniIdx, setCurrentMiniIdx] = useState(0);
   const [currentMidIdx, setCurrentMidIdx] = useState(0);
   const [currentMotorIdx, setCurrentMotorIdx] = useState(0);
+
+  const nextMini = () => {
+    setCurrentMiniIdx((prev) => (prev === miniGallery.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevMini = () => {
+    setCurrentMiniIdx((prev) => (prev === 0 ? miniGallery.length - 1 : prev - 1));
+  };
 
   const nextMid = () => {
     setCurrentMidIdx((prev) => (prev === midGallery.length - 1 ? 0 : prev + 1));
@@ -48,7 +64,10 @@ const Fleet = () => {
       overview: 'Mini-coaches come in a variety of sizes able to seat from a group of 16 to 24. The minis are roughly 28 feet long, 8.5 feet wide, and 9 feet tall. Airport transfer from the airport to a hotel? You’ll most likely want the 24 passenger mini for it’s luggage space.',
       standardFeatures: ['Reclining seats', 'Color DVD system', 'Rear bus storage'],
       optionalFeatures: ['PA system', 'Overhead reading lights', '12 volt / USB outlets', 'WiFi', 'ADA accessibility (2 wheelchair maximum)'],
-      image: mini1Img,
+      gallery: miniGallery,
+      currentIndex: currentMiniIdx,
+      onNext: nextMini,
+      onPrev: prevMini,
       imageRight: true
     },
     {

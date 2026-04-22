@@ -17,6 +17,7 @@ import Contact from './pages/Contact';
 import Careers from './pages/Careers';
 import WanderlieEvents from './pages/WanderlieEvents';
 import Privacy from './pages/Privacy';
+import Tickets from './pages/Tickets';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/careers" element={<Careers />} />
             <Route path="/wanderlie-events" element={<WanderlieEvents />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/tickets" element={<Tickets />} />
           </Routes>
         </main>
         <Footer />

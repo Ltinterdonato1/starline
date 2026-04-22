@@ -1,8 +1,39 @@
+import { useEffect, useState } from 'react';
 import '../styles/Footer.css';
+import busesImg from '../assets/footer/buses.jpg';
+import busInSnowImg from '../assets/footer/businsnow.jpg';
 
 const Footer = () => {
+  const [footerBg, setFooterBg] = useState(busesImg);
+
+  useEffect(() => {
+    const updateFooterBg = () => {
+      const now = new Date();
+      const month = now.getMonth(); // 0-11
+
+      // Winter months: December (11), January (0), February (1)
+      if (month === 11 || month === 0 || month === 1) {
+        setFooterBg(busInSnowImg);
+      } else {
+        // Use buses.jpg for other seasons
+        setFooterBg(busesImg);
+      }
+    };
+
+    updateFooterBg();
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer 
+      className="footer"
+      style={{ 
+        backgroundImage: `linear-gradient(rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0.5)), url(${footerBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center 20%', // Adjusted to hide potential bottom watermarks
+        backgroundAttachment: 'fixed',
+        backgroundColor: 'transparent'
+      }}
+    >
       <div className="container">
         <div className="footer-grid">
           {/* Column 1: Seattle */}
@@ -53,26 +84,32 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <div className="footer-bottom-info">
-                <p>Copyright {new Date().getFullYear()} Transportation Demand Management, LLC | All Rights Reserved</p>
-            </div>
-            <div className="social-icons">
-              <a href="https://www.facebook.com/TheStarlineCollection/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="https://www.instagram.com/starlinecollection/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://www.linkedin.com/company/the-starline-collection/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="https://www.youtube.com/channel/UC26Xr29qBAMGR0aCpCMPjzw" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="YouTube">
-                <i className="fab fa-youtube"></i>
-              </a>
-            </div>
+      <div 
+        className="footer-bottom"
+        style={{ 
+          backgroundColor: 'rgba(0, 123, 255, 0.3)',
+          borderTop: '1px solid rgba(255,255,255,0.1)'
+        }}
+      >
+        <div className="footer-bottom-content">
+          <div className="footer-bottom-info">
+              <p>Copyright {new Date().getFullYear()} Transportation Demand Management, LLC | All Rights Reserved</p>
+          </div>
+          <div className="social-icons">
+            <a href="https://www.facebook.com/TheStarlineCollection/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/starlinecollection/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/the-starline-collection/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC26Xr29qBAMGR0aCpCMPjzw" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="YouTube">
+              <i className="fab fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>

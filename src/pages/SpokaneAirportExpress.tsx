@@ -40,9 +40,6 @@ const SpokaneAirportExpress = () => {
               <h2>Spokane Airport Express Schedule</h2>
             </div>
 
-            
-           
-
             <div className="schedule-container mb-2 text-center">
               <h3>May 2026</h3>
               <p className="mb-3"><strong>NORTHBOUND TO SPOKANE INTERNATIONAL AIRPORT FROM MOSCOW, ID, PULLMAN, AND COLFAX</strong></p>
@@ -52,12 +49,12 @@ const SpokaneAirportExpress = () => {
                   <thead>
                     <tr>
                       <th>Date</th>
-                      <th colspan="2">U of I LLC (Moscow)</th>
-                      <th colspan="2">Best Western (Moscow)</th>
-                      <th colspan="2">Residence Inn (Moscow)</th>
-                      <th colspan="2">Admin/Lighty (Pullman)</th>
-                      <th colspan="2">Rosauers (Pullman)</th>
-                      <th colspan="2">Spokane Airport</th>
+                      <th colSpan={2}>U of I LLC (Moscow)</th>
+                      <th colSpan={2}>Best Western (Moscow)</th>
+                      <th colSpan={2}>Residence Inn (Moscow)</th>
+                      <th colSpan={2}>Admin/Lighty (Pullman)</th>
+                      <th colSpan={2}>Rosauers (Pullman)</th>
+                      <th colSpan={2}>Spokane Airport</th>
                     </tr>
                     <tr className="sub-header">
                       <th></th>
@@ -128,11 +125,11 @@ const SpokaneAirportExpress = () => {
                 </table>
               </div>
               <div className="text-center mt-4">
-                <button className="btn btn-primary btn-lg" style={{ marginTop: '40px' }}>Reserve Now!</button>
+                <a href="https://express.starlinecollection.com/?group=spokaneairportexpress" target="_blank" rel="noopener noreferrer">
+                  <button className="btn btn-primary btn-lg" style={{ marginTop: '40px' }}>Reserve Now!</button>
+                </a>
               </div>
             </div>
-
-            
           </div>
         </div>
       </section>

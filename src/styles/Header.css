@@ -83,8 +83,9 @@
   transition: color 0.3s;
 }
 
-.nav a:hover {
-  color: var(--color-accent);
+.nav a:hover,
+.nav a.active {
+  color: #c5a059 !important;
 }
 
 .wanderlie-link {

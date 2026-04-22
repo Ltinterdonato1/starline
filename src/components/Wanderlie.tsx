@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/Wanderlie.css';
-import whyUsBus from '../assets/whyusbus.webp';
+import interiorPurple from '../assets/wanderlie/interior_purple.jpg';
 
 const Wanderlie = () => {
   return (
@@ -23,7 +23,7 @@ const Wanderlie = () => {
           <Link to="/wanderlie-events" className="btn btn-gold">View All Events</Link>
         </div>
         <div className="wanderlie-image">
-          <img src={whyUsBus} alt="Wanderlie Adventure Bus" className="hero-bus-img" />
+          <img src={interiorPurple} alt="Wanderlie Luxury Interior" className="hero-bus-img" />
         </div>
       </div>
     </section>
@@ -31,3 +31,4 @@ const Wanderlie = () => {
 };
 
 export default Wanderlie;
+

@@ -32,7 +32,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000);
+    }, 30000); // 30 seconds
     return () => clearInterval(timer);
   }, []);
 

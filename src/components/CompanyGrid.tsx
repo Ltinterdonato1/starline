@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import '../styles/CompanyGrid.css';
 import aaMotorcoach from '../assets/A&A-Motorcoach.jpg';
-import starlineLuxury from '../assets/Starline.jpg';
-import sunValleyExpress from '../assets/Sun_Valley_Express.png';
+import starlineLuxury from '../assets/56_PassCoach/bus1.jpg';
+import sunValleyExpress from '../assets/16-24_PassCoach/mini-1.jpg';
 import wheatlandExpress from '../assets/Wheetland_Express.jpg';
 
 const companies = [

@@ -1,13 +1,35 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import '../styles/CompanyPage.css';
 import about1 from '../assets/about-us-1.jpeg';
 import about2 from '../assets/about-us-2.jpeg';
 
+// Rotating background images for Safety section
+import aboutus1 from '../assets/about_us/aboutus1.jpg';
+import aboutus2 from '../assets/about_us/aboutus2.jpg';
+import aboutus3 from '../assets/about_us/aboutus3.jpg';
+import aboutus4 from '../assets/about_us/aboutus4.jpg';
+import aboutus5 from '../assets/about_us/aboutus5.jpg';
+import aboutus6 from '../assets/about_us/aboutus6.jpg';
+import aboutus7 from '../assets/about_us/aboutus7.jpg';
+
+const safetyImages = [aboutus1, aboutus2, aboutus3, aboutus4, aboutus5, aboutus6, aboutus7];
+
 const About = () => {
   const { hash } = useLocation();
+  const [currentSafetyImg, setCurrentSafetyImg] = useState(safetyImages[0]);
 
   useEffect(() => {
+    // Logic to change image every 2 hours (consistent for all users)
+    const updateImage = () => {
+      const twoHoursInMs = 2 * 60 * 60 * 1000;
+      const index = Math.floor(Date.now() / twoHoursInMs) % safetyImages.length;
+      setCurrentSafetyImg(safetyImages[index]);
+    };
+
+    updateImage();
+    const interval = setInterval(updateImage, 60000); // Check every minute
+
     if (hash) {
       const element = document.getElementById(hash.substring(1));
       if (element) {
@@ -16,6 +38,8 @@ const About = () => {
     } else {
       window.scrollTo(0, 0);
     }
+
+    return () => clearInterval(interval);
   }, [hash]);
 
   return (
@@ -54,9 +78,20 @@ const About = () => {
         </div>
       </section>
 
-      {/* Safety Section */}
-      <section className="section-padding bg-primary text-white" id="safety">
-        <div className="container">
+      {/* Safety Section with Rotating Faded Background */}
+      <section 
+        className="section-padding text-white" 
+        id="safety"
+        style={{ 
+          position: 'relative',
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${currentSafetyImg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          transition: 'background-image 1s ease-in-out'
+        }}
+      >
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <h2 className="section-title text-white">SAFETY FIRST!</h2>
           <p className="text-center mb-5" style={{ fontSize: '18px', maxWidth: '900px', margin: '0 auto 50px' }}>
             We recognize that safety is one of the most significant priorities for our clients. We are dedicated to adhering to all federal and state regulations and conducting safety oriented training on a routine basis.

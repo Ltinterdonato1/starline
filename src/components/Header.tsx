@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css';
-import starlineLogo from '../assets/Logo.jpg';
+import starlineLogo from '../assets/Starline_Logo.png';
 
 const Header = () => {
   return (
@@ -13,12 +13,12 @@ const Header = () => {
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="#tickets">Tickets</a></li>
-            <li><Link to="/wanderlie-events" className="wanderlie-link">Wanderlie Events</Link></li>
-            <li><Link to="/fleet">Our Fleet</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
-            <li><Link to="/careers">Careers</Link></li>
+            <li><NavLink to="/tickets">Tickets</NavLink></li>
+            <li><NavLink to="/wanderlie-events" className="wanderlie-link">Wanderlie Events</NavLink></li>
+            <li><NavLink to="/fleet">Our Fleet</NavLink></li>
+            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/contact">Contact Us</NavLink></li>
+            <li><NavLink to="/careers">Careers</NavLink></li>
           </ul>
         </nav>
 

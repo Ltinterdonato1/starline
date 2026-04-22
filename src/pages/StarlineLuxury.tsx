@@ -1,5 +1,5 @@
 import '../styles/CompanyPage.css';
-import starlineImg from '../assets/Starline.jpg';
+import starlineImg from '../assets/56_PassCoach/bus1.jpg';
 
 const StarlineLuxury = () => {
   return (

@@ -1,5 +1,5 @@
 import '../styles/CompanyPage.css';
-import sunValleyImg from '../assets/Sun_Valley_Express.png';
+import sunValleyImg from '../assets/16-24_PassCoach/mini-1.jpg';
 
 const SunValleyExpress = () => {
   return (
@@ -19,6 +19,13 @@ const SunValleyExpress = () => {
             <h3>Daily Scheduled Service</h3>
             <p className="mt-3">Providing reliable daily transportation between Sun Valley and the Boise Airport.</p>
             <p className="highlight-text mt-3">Reservations are REQUIRED and must be made at least 48 hours in advance.</p>
+          </div>
+
+          <div className="pricing-banner bg-primary text-white rounded mb-5">
+            <div className="container text-center py-4">
+              <h2>One-Way Fare: $105.00</h2>
+              <p>Fares are subject to change. Please review all terms before booking.</p>
+            </div>
           </div>
 
           <div className="schedule-section py-2">

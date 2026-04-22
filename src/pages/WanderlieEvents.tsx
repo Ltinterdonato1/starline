@@ -4,7 +4,7 @@ import '../styles/CompanyPage.css';
 
 // Image imports from the new wanderlie folder
 import heroImg from '../assets/wanderlie/9.jpg';
-import luxuryInterior from '../assets/wanderlie/wanderlie-luxury-coach-interior.png';
+import luxuryInterior from '../assets/wanderlie/interior_purple.jpg';
 import festivalImg from '../assets/wanderlie/10.png';
 import holidayImg from '../assets/wanderlie/spaceneedle.jpg';
 import hopsImg from '../assets/wanderlie/unsplash-image-snnhGYNqm44.jpg';
@@ -23,20 +23,18 @@ import img10_1_png from '../assets/wanderlie/10(1).png';
 import img11_1_png from '../assets/wanderlie/11(1).png';
 import img12_png from '../assets/wanderlie/12.png';
 import whyUsImg from '../assets/wanderlie/Why+choose+us.png';
-import horizontalLogo from '../assets/wanderlie/Horizontal+V2.png';
 import gotTicketsImg from '../assets/wanderlie/Got+tickets.png';
-import spaceNeedle from '../assets/wanderlie/spaceneedle.jpg';
 import unsplashHero from '../assets/wanderlie/unsplash-image-XmYSlYrupL8.jpg';
 
 // Upcoming Event Image Imports
-import headAndHeart from '../assets/wanderlie/upcoming events/STG_TheHeadAndTheHeart_Remlinger_1080x1080.jpg';
+import bigThief from '../assets/wanderlie/upcoming events/Big Theif.webp';
+import cake from '../assets/wanderlie/upcoming events/Cake.webp';
+import dsdNol from '../assets/wanderlie/upcoming events/DSD+&+NOL_RF_1080x1080.webp';
+import jrad from '../assets/wanderlie/upcoming events/JoeRussoAlmsotDead.webp';
+import menAtWork from '../assets/wanderlie/upcoming events/Menatwork.webp';
+import headHeart from '../assets/wanderlie/upcoming events/STG_TheHeadAndTheHeart_Remlinger_1080x1080.jpg';
 import blackKeys from '../assets/wanderlie/upcoming events/The+Black+Keys_RF_1080x1080.jpg';
-import bigThiefImg from '../assets/wanderlie/upcoming events/Big Theif.webp';
-import cakeImg from '../assets/wanderlie/upcoming events/Cake.webp';
-import dsdImg from '../assets/wanderlie/upcoming events/DSD+&+NOL_RF_1080x1080.webp';
-import joeRussoImg from '../assets/wanderlie/upcoming events/JoeRussoAlmsotDead.webp';
-import menAtWorkImg from '../assets/wanderlie/upcoming events/Menatwork.webp';
-import theeSacredSoulsImg from '../assets/wanderlie/upcoming events/Thee Sacred Souls.webp';
+import sacredSouls from '../assets/wanderlie/upcoming events/Thee Sacred Souls.webp';
 
 const upcomingEvents = [
   {
@@ -70,7 +68,7 @@ const upcomingEvents = [
     time: '6:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: headAndHeart
+    image: headHeart
   },
   {
     title: '15th Anniversary Tour: The Head and The Heart',
@@ -81,7 +79,7 @@ const upcomingEvents = [
     time: '6:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: headAndHeart
+    image: headHeart
   },
   {
     title: 'Deep Sea Diver & Nation of Language',
@@ -92,7 +90,7 @@ const upcomingEvents = [
     time: '6:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: dsdImg
+    image: dsdNol
   },
   {
     title: 'Thee Sacred Souls',
@@ -103,7 +101,7 @@ const upcomingEvents = [
     time: '6:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: theeSacredSoulsImg
+    image: sacredSouls
   },
   {
     title: 'Men at Work & Toad The Wet Sprocket',
@@ -114,7 +112,7 @@ const upcomingEvents = [
     time: '6:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: menAtWorkImg
+    image: menAtWork
   },
   {
     title: "Joe Russo's Almost Dead",
@@ -125,7 +123,7 @@ const upcomingEvents = [
     time: '6:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: joeRussoImg
+    image: jrad
   },
   {
     title: 'Cake',
@@ -136,7 +134,7 @@ const upcomingEvents = [
     time: '7:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: cakeImg
+    image: cake
   },
   {
     title: 'Big Thief: Somersault Slide 360 Tour',
@@ -147,7 +145,7 @@ const upcomingEvents = [
     time: '6:00 PM',
     location: 'Remlinger Farms, Carnation, WA',
     price: '$49 roundtrip',
-    image: bigThiefImg
+    image: bigThief
   }
 ];
 

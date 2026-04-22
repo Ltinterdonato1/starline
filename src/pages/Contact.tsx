@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/CompanyPage.css';
+import seattleHero from '../assets/Seattle.jpg';
 
 const Contact = () => {
   const [subject, setSubject] = useState('');
@@ -10,10 +11,63 @@ const Contact = () => {
 
   return (
     <div className="company-page">
-      <section className="company-hero bg-primary">
-        <div className="container text-center">
-          <h1 className="text-white">Contact Us</h1>
-          <p className="hero-subtitle text-white">WE'D LOVE TO HEAR FROM YOU</p>
+      <section className="company-hero dynamic-hero" style={{ position: 'relative', overflow: 'hidden', height: '60vh', minHeight: '400px' }}>
+        {/* YouTube Video Background Wrapper */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          pointerEvents: 'none',
+          zIndex: 0
+        }}>
+          <iframe 
+            src="https://www.youtube.com/embed/YksfVMtmpVY?autoplay=1&mute=1&loop=1&playlist=YksfVMtmpVY&start=15&end=240&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              width: '100vw',
+              height: '56.25vw', // 16:9 aspect ratio
+              minHeight: '100vh',
+              minWidth: '177.77vh', // 16:9 aspect ratio
+              transform: 'translate(-50%, -50%)',
+              objectFit: 'cover'
+            }}
+            title="Seattle Drone Video"
+          ></iframe>
+        </div>
+
+        {/* Fallback Image (shows while loading or if iframe fails) */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage: `url(${seattleHero})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          zIndex: -1
+        }}></div>
+        
+        {/* Dark Overlay for Text Contrast */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0,0,0,0.45)',
+          zIndex: 1
+        }}></div>
+
+        <div className="container text-center" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <h1 className="text-white" style={{ fontSize: '64px', textShadow: '0 4px 15px rgba(0,0,0,0.3)' }}>Contact Us</h1>
+          <p className="hero-subtitle text-white" style={{ fontSize: '24px', letterSpacing: '2px' }}>WE'D LOVE TO HEAR FROM YOU</p>
         </div>
       </section>
 
@@ -31,10 +85,10 @@ const Contact = () => {
               <p>For quotes and inquiries:<br/> <a href="mailto:SCSales@StarlineCollection.com">SCSales@StarlineCollection.com</a></p>
             </div>
 
-            {/* Column 2: 24/7 Assistance */}
+            {/* Column 2: Assistance */}
             <div className="contact-info-col">
               <h2>24/7 Assistance</h2>
-              <h1>206.763.5817</h1>
+              <h1 style={{ color: 'var(--color-accent)' }}>206.763.5817</h1>
               <p>Emergency requests or last-minute charter changes through our Manager on Duty.</p>
             </div>
 
@@ -45,6 +99,7 @@ const Contact = () => {
               <p>Seattle, WA & Beyond</p>
               <p className="mt-4">Phone: <a href="tel:2067635817">206.763.5817</a></p>
               <p>Email: <a href="mailto:info@wanderlie.com">info@wanderlie.com</a></p>
+              
               <div className="social-icons" style={{ justifyContent: 'center', marginTop: 'auto', paddingTop: '20px' }}>
                 <a href="https://www.facebook.com/WanderlieEvents" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ color: 'var(--color-primary)', fontSize: '24px', margin: '0 10px' }}>
                   <i className="fab fa-facebook-f"></i>
