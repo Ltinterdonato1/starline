@@ -28,8 +28,8 @@ const Footer = () => {
       className="footer"
       style={{ 
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(${footerBg})`,
-        backgroundSize: 'contain',
-        backgroundPosition: 'center bottom',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'scroll',
         backgroundColor: '#fff',
