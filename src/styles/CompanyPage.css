@@ -1223,7 +1223,5 @@
 }
 
 @media (max-width: 480px) {
-  .wanderlie-page .story-grid {
-    grid-template-columns: 1fr !important;
-  }
+  /* Removed Wanderlie story-grid override to maintain 2-column layout */
 }
