@@ -65,10 +65,10 @@ const Tickets = () => {
               position: 'absolute',
               top: '40%',
               left: '50%',
-              width: '100vw',
-              height: '56.25vw', // 16:9 aspect ratio
-              minHeight: '100vh',
-              minWidth: '177.77vh', // 16:9 aspect ratio
+              width: '110vw',
+              height: '61.87vw', // 16:9 of 110vw
+              minHeight: '115vh',
+              minWidth: '204.44vh', // 16:9 of 115vh
               transform: 'translate(-50%, -50%)',
               objectFit: 'cover'
             }}
