@@ -29,9 +29,9 @@ const Footer = () => {
       style={{ 
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(${footerBg})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center 20%',
-        backgroundAttachment: 'fixed',
-        backgroundColor: 'transparent',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'scroll', /* Changed from fixed for better mobile behavior */
+        backgroundColor: '#fff',
         color: '#000000' // Solid black text for the whole footer
       }}
     >
