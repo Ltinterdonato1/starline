@@ -30,7 +30,7 @@ const Contact = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             style={{
               position: 'absolute',
-              top: '50%',
+              top: '40%',
               left: '50%',
               width: '100vw',
               height: '56.25vw', // 16:9 aspect ratio

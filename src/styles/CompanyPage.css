@@ -803,7 +803,7 @@
 
 .commitment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Default 4 columns */
   gap: 20px;
 }
 
@@ -958,6 +958,11 @@
   .hero-content-overlay h1 {
     font-size: 32px !important;
     margin: 0 !important;
+  }
+
+  /* Force 2 columns for commitment grid on tablet */
+  .commitment-grid {
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 
@@ -1142,8 +1147,83 @@
   }
 }
 
+/* Tickets Page Grid */
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tickets-grid .feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tickets-grid .feature-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.tickets-grid h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tickets-grid .description {
+  font-size: 14px;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
+}
+
+.tickets-grid .destinations {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.tickets-grid .price {
+  color: var(--color-accent);
+  font-weight: 800;
+  font-size: 18px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .tickets-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .tickets-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+  }
+  
+  .tickets-grid .feature-content {
+    padding: 15px !important;
+  }
+  
+  .tickets-grid h3 {
+    font-size: 16px !important;
+  }
+  
+  .tickets-grid p {
+    font-size: 12px !important;
+  }
+  
+  .tickets-grid .btn {
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+}
+
 @media (max-width: 480px) {
-    .wanderlie-page .story-grid {
+  .wanderlie-page .story-grid {
     grid-template-columns: 1fr !important;
   }
 }

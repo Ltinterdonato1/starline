@@ -43,27 +43,69 @@ const ticketServices = [
 const Tickets = () => {
   return (
     <div className="company-page">
-      <section className="company-hero bg-primary">
-        <div className="container text-center">
-          <h1 className="text-white">Tickets & Scheduled Service</h1>
-          <p className="hero-subtitle text-white">CHOOSE YOUR DESTINATION AND BOOK YOUR SEAT</p>
+      <section className="company-hero dynamic-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '450px', backgroundColor: '#000' }}>
+        {/* YouTube Video Background */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          pointerEvents: 'none',
+          zIndex: 1
+        }}>
+          <iframe 
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/YksfVMtmpVY?autoplay=1&mute=1&loop=1&playlist=YksfVMtmpVY&start=15&end=240&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1" 
+            title="Seattle Drone Video" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            style={{
+              position: 'absolute',
+              top: '40%',
+              left: '50%',
+              width: '100vw',
+              height: '56.25vw', // 16:9 aspect ratio
+              minHeight: '100vh',
+              minWidth: '177.77vh', // 16:9 aspect ratio
+              transform: 'translate(-50%, -50%)',
+              objectFit: 'cover'
+            }}
+          ></iframe>
+        </div>
+        
+        {/* Overlay to ensure text readability */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          zIndex: 2
+        }}></div>
+
+        <div className="container text-center" style={{ position: 'relative', zIndex: 3, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <h1 className="text-white" style={{ fontSize: '56px', textShadow: '2px 2px 10px rgba(0,0,0,0.5)', marginBottom: '10px' }}>Tickets & Scheduled Service</h1>
+          <p className="hero-subtitle text-white" style={{ fontSize: '20px', textShadow: '1px 1px 5px rgba(0,0,0,0.5)', textTransform: 'uppercase', fontWeight: '600' }}>CHOOSE YOUR DESTINATION AND BOOK YOUR SEAT</p>
         </div>
       </section>
 
       <section className="section-padding">
         <div className="container">
-          <div className="features-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
+          <div className="tickets-grid">
             {ticketServices.map((service, index) => (
-              <div key={index} className="feature-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <div className="feature-image" style={{ height: '180px' }}>
+              <div key={index} className="feature-card">
+                <div className="feature-image">
                   <img src={service.image} alt={service.title} />
                 </div>
-                <div className="feature-content" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', padding: '25px' }}>
-                  <h3 style={{ fontSize: '20px', marginBottom: '10px' }}>{service.title}</h3>
-                  <p style={{ fontSize: '14px', color: 'var(--color-secondary)', marginBottom: '15px' }}>{service.description}</p>
-                  <p style={{ fontSize: '13px', fontWeight: '700', marginBottom: '5px' }}>{service.destinations}</p>
-                  <p style={{ color: 'var(--color-accent)', fontWeight: '800', fontSize: '18px', marginTop: 'auto', marginBottom: '20px' }}>{service.price}</p>
-                  <Link to={service.link} className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }}>View Schedule</Link>
+                <div className="feature-content" style={{ display: 'flex', flexDirection: 'column', height: 'calc(100% - 180px)' }}>
+                  <h3>{service.title}</h3>
+                  <p className="description">{service.description}</p>
+                  <p className="destinations">{service.destinations}</p>
+                  <p className="price">{service.price}</p>
+                  <Link to={service.link} className="btn btn-primary">View Schedule</Link>
                 </div>
               </div>
             ))}

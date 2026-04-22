@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/CompanyPage.css';
 
 // Image imports from the new wanderlie folder

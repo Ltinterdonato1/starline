@@ -127,7 +127,7 @@ const Fleet = () => {
                 </div>
               </div>
               <div className="fleet-image">
-                {item.gallery ? (
+                {item.gallery && item.gallery.length > 0 ? (
                   <div className="fleet-slider">
                     <img src={item.gallery[item.currentIndex]} alt={`${item.title}`} className="slider-img" />
                     <button className="slider-btn prev" onClick={item.onPrev}>&#10094;</button>
@@ -135,7 +135,7 @@ const Fleet = () => {
                     <div className="slider-counter">{item.currentIndex + 1} / {item.gallery.length}</div>
                   </div>
                 ) : (
-                  <img src={item.image} alt={item.title} />
+                  <div className="fleet-image-placeholder">No image available</div>
                 )}
               </div>
             </div>

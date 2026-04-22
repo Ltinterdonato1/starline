@@ -24,11 +24,12 @@ const Careers = () => {
             </p>
           </div>
 
-          <div className="split-layout mb-5">
-            <div className="text-content text-center">
-              <h2>Meet Our Team</h2>
+          <div className="split-layout mb-5" style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <div className="text-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+              <h2 className="mb-4">Meet Our Team</h2>
               <p className="mb-4">At Starline, we're more than just a transportation company—we're a family. Our team members are the heart of our operation, dedicated to providing the best experience for our passengers every single day.</p>
-              <div className="info-box bg-light text-center">
+              
+              <div className="info-box bg-light text-center" style={{ width: '100%' }}>
                 <h3 className="mb-3">Our Values</h3>
                 <ul className="mini-feature-list" style={{ display: 'inline-block', textAlign: 'left', listStyle: 'none', paddingLeft: 0 }}>
                   <li><strong>Safety:</strong> Our #1 priority in everything we do.</li>
@@ -38,13 +39,13 @@ const Careers = () => {
                 </ul>
               </div>
             </div>
-            <div className="team-image-container" style={{ marginTop: '40px' }}>
+            <div className="team-image-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '40px' }}>
               <img src={teamPhoto} alt="Starline Team" className="team-photo" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
               <div className="photo-caption" style={{ textAlign: 'center' }}>The Starline Collection Team</div>
             </div>
           </div>
 
-          <div className="info-box mb-5 text-center">
+          <div className="info-box mb-5 text-center" style={{ maxWidth: '900px', margin: '0 auto' }}>
             <h3>Award-Winning Benefits</h3>
             <p className="mb-4">We are proud to offer the <strong>highest driver pay and benefits</strong> in the region. Join us and become one of the nation’s highest-paid motorcoach drivers.</p>
             <div className="commitment-grid mt-4">
@@ -56,7 +57,7 @@ const Careers = () => {
           </div>
 
           <div className="text-center mt-5">
-            <h2 className="mb-4">A Day in the Life</h2>
+            <h2 className="section-title">A Day in the Life</h2>
             <p className="mt-4" style={{ maxWidth: '900px', margin: '0 auto', fontSize: '18px' }}>
               Operating the Northwest's finest fleet means working with the best equipment and the best people. From weekend ski shuttles to major corporate contracts, no two days are the same.
             </p>
