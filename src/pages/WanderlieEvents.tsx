@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/CompanyPage.css';
 
@@ -151,7 +151,25 @@ const upcomingEvents = [
 
 const WanderlieEvents = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 3;
+  const [itemsToShow, setItemsToShow] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width > 1200) {
+        setItemsToShow(4);
+      } else if (width > 992) {
+        setItemsToShow(3);
+      } else {
+        setItemsToShow(2);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const maxIndex = Math.max(0, upcomingEvents.length - itemsToShow);
 
   const nextSlide = () => {
@@ -264,7 +282,7 @@ const WanderlieEvents = () => {
         </div>
       </section>
 
-      {/* Upcoming Events Section */}
+      {/* Upcoming Events Slider Section */}
       <section className="section-padding">
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
@@ -296,29 +314,29 @@ const WanderlieEvents = () => {
             >
               {upcomingEvents.map((event, index) => (
                 <div key={index} className="event-slide-item">
-                  <div className="feature-card event-card" style={{ textAlign: 'left', height: '100%', margin: '0 15px', display: 'flex', flexDirection: 'column' }}>
+                  <div className="feature-card event-card" style={{ textAlign: 'left', height: '100%', margin: '0 10px', display: 'flex', flexDirection: 'column' }}>
                     <div className="feature-image" style={{ aspectRatio: '1 / 1', height: 'auto', flexShrink: 0 }}>
                       <img src={event.image} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
-                    <div className="feature-content" style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                      <div style={{ display: 'flex', gap: '15px', marginBottom: '15px' }}>
-                        <div style={{ textAlign: 'center', borderRight: '1px solid #ddd', paddingRight: '15px' }}>
-                          <p style={{ margin: 0, fontWeight: '700', color: '#c5a059', textTransform: 'uppercase', fontSize: '14px' }}>{event.month}</p>
-                          <p style={{ margin: 0, fontSize: '24px', fontWeight: '700' }}>{event.day}</p>
+                    <div className="feature-content" style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, padding: '15px' }}>
+                      <div style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
+                        <div style={{ textAlign: 'center', borderRight: '1px solid #ddd', paddingRight: '10px' }}>
+                          <p style={{ margin: 0, fontWeight: '700', color: '#c5a059', textTransform: 'uppercase', fontSize: '11px' }}>{event.month}</p>
+                          <p style={{ margin: 0, fontSize: '18px', fontWeight: '700' }}>{event.day}</p>
                         </div>
                         <div>
-                          <p className="small mb-0" style={{ color: '#666', fontSize: '12px' }}>{event.subtitle}</p>
-                          <h3 style={{ margin: 0, fontSize: '18px', color: '#2c2416' }}>{event.title}</h3>
+                          <p className="small mb-0" style={{ color: '#666', fontSize: '10px' }}>{event.subtitle}</p>
+                          <h3 style={{ margin: 0, fontSize: '15px', color: '#2c2416' }}>{event.title}</h3>
                         </div>
                       </div>
                       
-                      <div style={{ fontSize: '14px', color: '#555', marginBottom: '20px' }}>
+                      <div style={{ fontSize: '12px', color: '#555', marginBottom: '15px' }}>
                         <p className="mb-1"><strong>@</strong> {event.location}</p>
-                        <p className="mb-1"><strong>Date:</strong> {event.month} {event.day}, {event.year} – {event.time}</p>
+                        <p className="mb-1"><strong>Date:</strong> {event.month} {event.day}, {event.year}</p>
                         <p className="mb-0"><strong>Price:</strong> {event.price}</p>
                       </div>
                       
-                      <button className="btn btn-gold" style={{ width: '100%', marginTop: 'auto' }}>Buy Tickets</button>
+                      <button className="btn btn-gold" style={{ width: '100%', marginTop: 'auto', padding: '8px', fontSize: '13px' }}>Buy Tickets</button>
                     </div>
                   </div>
                 </div>

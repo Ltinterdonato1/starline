@@ -495,7 +495,30 @@
 
 @media (max-width: 576px) {
   .fleet-features-grid {
+    grid-template-columns: 1fr 1fr; /* Keep 2 columns on mobile */
+    gap: 15px;
+  }
+  
+  .mini-feature-list li {
+    font-size: 11px; /* Slightly smaller for mobile grid fit */
+  }
+  
+  .feature-group p {
+    font-size: 13px;
+  }
+
+  .form-row {
     grid-template-columns: 1fr;
+  }
+
+  /* Force 2 columns for name row */
+  .form-row-mobile-2 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+
+  .col-span-full {
+    grid-column: 1 / -1 !important;
   }
 }
 
@@ -778,12 +801,6 @@
   border-color: var(--color-accent);
 }
 
-@media (max-width: 576px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
-
 .commitment-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -866,7 +883,7 @@
 }
 
 .event-slide-item {
-  flex: 0 0 33.333%;
+  flex: 0 0 25%; /* 4 items on desktop */
   box-sizing: border-box;
 }
 
@@ -901,32 +918,162 @@
   cursor: not-allowed;
 }
 
+@media (max-width: 1200px) {
+  .event-slide-item {
+    flex: 0 0 33.333%; /* 3 items */
+  }
+}
+
+/* Middle/Tablet and Mobile Hero Auto-Fit */
+@media (max-width: 1024px) {
+  .dynamic-hero {
+    height: auto !important;
+    min-height: 250px !important;
+    aspect-ratio: 16 / 9;
+  }
+
+  .hero-images {
+    position: relative !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .hero-img-container {
+    height: 300px !important;
+  }
+
+  .hero-content-overlay {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px !important;
+  }
+
+  .hero-content-overlay h1 {
+    font-size: 32px !important;
+    margin: 0 !important;
+  }
+}
+
 @media (max-width: 992px) {
   .event-slide-item {
-    flex: 0 0 50%;
+    flex: 0 0 50%; /* 2 items on tablet */
   }
 }
 
 @media (max-width: 600px) {
   .event-slide-item {
-    flex: 0 0 100%;
+    flex: 0 0 50%; /* Keep 2 items on mobile as requested */
+  }
+
+  .event-card .feature-content {
+    padding: 12px !important;
+  }
+
+  .event-card h3 {
+    font-size: 13px !important;
+  }
+
+  .event-card .small {
+    font-size: 9px !important;
+  }
+
+  .event-card p {
+    font-size: 11px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .event-card .btn {
+    padding: 8px !important;
+    font-size: 11px !important;
+  }
+
+  /* About Us Mobile Specifics */
+  .company-page h1 {
+    font-size: 28px !important;
+  }
+
+  .section-title {
+    font-size: 22px !important;
+  }
+
+  .section-padding {
+    padding: 40px 0 !important;
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: 30px !important;
+  }
+
+  /* Specific 2-column sections for About page */
+  #safety .split-layout, 
+  #eco-friendly .split-layout,
+  .policy-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+  }
+
+  #safety h3, #eco-friendly h3 {
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .white-list li, .location-list li {
+    font-size: 11px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .policy-card {
+    padding: 15px !important;
+  }
+
+  .policy-card h3 {
+    font-size: 13px !important;
+  }
+
+  .policy-card p {
+    font-size: 10px !important;
+  }
+
+  .address-box {
+    padding: 15px !important;
+    width: 100% !important;
+  }
+
+  .info-box {
+    padding: 20px !important;
+  }
+
+  .info-box h3 {
+    font-size: 16px !important;
+  }
+
+  .info-box p {
+    font-size: 13px !important;
   }
 
   /* Wanderlie Events Mobile Specifics */
   .wanderlie-page .company-hero {
     height: auto !important;
-    min-height: 300px !important;
+    min-height: 250px !important;
     aspect-ratio: 16 / 9;
     background-size: cover !important;
   }
 
   .wanderlie-page h2 {
-    font-size: 28px !important;
+    font-size: 24px !important;
   }
 
   .wanderlie-page .split-layout {
     grid-template-columns: 1fr;
-    gap: 40px !important;
+    gap: 30px !important;
     text-align: center;
   }
 
@@ -950,6 +1097,15 @@
 
   .wanderlie-page .gallery-grid {
     grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Specific hero adjustments for mobile */
+  .hero-img-container {
+    height: 200px !important;
+  }
+
+  .hero-content-overlay h1 {
+    font-size: 22px !important;
   }
 }
 

@@ -50,8 +50,8 @@ const About = () => {
           <div className="hero-img-container"><img src={about1} alt="About Us 1" /></div>
           <div className="hero-img-container"><img src={about2} alt="About Us 2" /></div>
         </div>
-        <div className="container hero-content-overlay" style={{ padding: '0 0 60px 0', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center' }}>
-          <h1 style={{ color: 'white', fontSize: '64px', textAlign: 'center' }}>About The Starline Collection</h1>
+        <div className="container hero-content-overlay" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <h1 style={{ color: 'white', fontSize: '64px', textAlign: 'center', margin: 0 }}>About The Starline Collection</h1>
         </div>
       </section>
 

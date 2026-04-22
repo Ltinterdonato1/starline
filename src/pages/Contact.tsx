@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../styles/CompanyPage.css';
-import seattleHero from '../assets/Seattle.jpg';
 
 const Contact = () => {
   const [subject, setSubject] = useState('');
@@ -11,8 +10,8 @@ const Contact = () => {
 
   return (
     <div className="company-page">
-      <section className="company-hero dynamic-hero" style={{ position: 'relative', overflow: 'hidden', height: '60vh', minHeight: '400px' }}>
-        {/* YouTube Video Background Wrapper */}
+      <section className="company-hero dynamic-hero" style={{ position: 'relative', overflow: 'hidden', minHeight: '450px', backgroundColor: '#000' }}>
+        {/* YouTube Video Background */}
         <div style={{
           position: 'absolute',
           top: 0,
@@ -20,12 +19,15 @@ const Contact = () => {
           width: '100%',
           height: '100%',
           pointerEvents: 'none',
-          zIndex: 0
+          zIndex: 1
         }}>
           <iframe 
-            src="https://www.youtube.com/embed/YksfVMtmpVY?autoplay=1&mute=1&loop=1&playlist=YksfVMtmpVY&start=15&end=240&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
+            width="100%" 
+            height="100%" 
+            src="https://www.youtube.com/embed/YksfVMtmpVY?autoplay=1&mute=1&loop=1&playlist=YksfVMtmpVY&start=15&end=240&controls=0&showinfo=0&rel=0&modestbranding=1&enablejsapi=1" 
+            title="Seattle Drone Video" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             style={{
               position: 'absolute',
               top: '50%',
@@ -37,37 +39,22 @@ const Contact = () => {
               transform: 'translate(-50%, -50%)',
               objectFit: 'cover'
             }}
-            title="Seattle Drone Video"
           ></iframe>
         </div>
-
-        {/* Fallback Image (shows while loading or if iframe fails) */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundImage: `url(${seattleHero})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          zIndex: -1
-        }}></div>
         
-        {/* Dark Overlay for Text Contrast */}
+        {/* Overlay to ensure text readability */}
         <div style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0,0,0,0.45)',
-          zIndex: 1
+          backgroundColor: 'rgba(0, 0, 0, 0.4)',
+          zIndex: 2
         }}></div>
 
-        <div className="container text-center" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <h1 className="text-white" style={{ fontSize: '64px', textShadow: '0 4px 15px rgba(0,0,0,0.3)' }}>Contact Us</h1>
-          <p className="hero-subtitle text-white" style={{ fontSize: '24px', letterSpacing: '2px' }}>WE'D LOVE TO HEAR FROM YOU</p>
+        <div className="container text-center" style={{ position: 'relative', zIndex: 3, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <h1 className="text-white" style={{ fontSize: '64px', textShadow: '2px 2px 10px rgba(0,0,0,0.5)', margin: 0 }}>Contact Us</h1>
         </div>
       </section>
 
@@ -99,7 +86,6 @@ const Contact = () => {
               <p>Seattle, WA & Beyond</p>
               <p className="mt-4">Phone: <a href="tel:2067635817">206.763.5817</a></p>
               <p>Email: <a href="mailto:info@wanderlie.com">info@wanderlie.com</a></p>
-              
               <div className="social-icons" style={{ justifyContent: 'center', marginTop: 'auto', paddingTop: '20px' }}>
                 <a href="https://www.facebook.com/WanderlieEvents" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ color: 'var(--color-primary)', fontSize: '24px', margin: '0 10px' }}>
                   <i className="fab fa-facebook-f"></i>
@@ -116,7 +102,7 @@ const Contact = () => {
           <div className="contact-form-section" style={{ marginTop: '60px' }}>
             <h2 className="mb-4" style={{ textAlign: 'center', width: '100%', display: 'block' }}>Send Us a Message</h2>
             <form className="contact-form" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              <div className="form-row">
+              <div className="form-row form-row-mobile-2">
                 <div className="form-group">
                   <label htmlFor="firstName">First Name</label>
                   <input type="text" id="firstName" name="firstName" required />
@@ -126,18 +112,17 @@ const Contact = () => {
                   <input type="text" id="lastName" name="lastName" required />
                 </div>
               </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              
+              <div className="form-row form-row-mobile-2">
                 <div className="form-group">
                   <label htmlFor="phone">Phone Number</label>
                   <input type="tel" id="phone" name="phone" required />
                 </div>
-              </div>
-              
-              <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="subject">Subject</label>
                   <select 
@@ -154,16 +139,14 @@ const Contact = () => {
                     <option value="wanderlie">Wanderlie Events</option>
                   </select>
                 </div>
-
-                <div className="form-group">
-                  {subject === 'reschedule' && (
-                    <>
-                      <label htmlFor="ticketNumber">Ticket #</label>
-                      <input type="text" id="ticketNumber" name="ticketNumber" placeholder="Enter ticket number" required />
-                    </>
-                  )}
-                </div>
               </div>
+
+              {subject === 'reschedule' && (
+                <div className="form-group">
+                  <label htmlFor="ticketNumber">Ticket #</label>
+                  <input type="text" id="ticketNumber" name="ticketNumber" placeholder="Enter ticket number" required />
+                </div>
+              )}
 
               <div className="form-group">
                 <label htmlFor="message">How can we help you?</label>
