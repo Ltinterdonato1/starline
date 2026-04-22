@@ -89,7 +89,7 @@
 }
 
 .wanderlie-link {
-  color: #c5a059 !important; /* Elegant gold color for Wanderlie */
+  /* Removed static color to allow active state to control it */
 }
 
 @media (max-width: 1024px) {

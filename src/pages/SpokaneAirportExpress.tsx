@@ -124,9 +124,9 @@ const SpokaneAirportExpress = () => {
                   </tbody>
                 </table>
               </div>
-              <div className="text-center mt-4">
+            <div className="text-center mt-5" style={{ textAlign: 'center', marginTop: '80px' }}>
                 <a href="https://express.starlinecollection.com/?group=spokaneairportexpress" target="_blank" rel="noopener noreferrer">
-                  <button className="btn btn-primary btn-lg" style={{ marginTop: '40px' }}>Reserve Now!</button>
+                  <button className="btn btn-primary btn-lg">Reserve Now!</button>
                 </a>
               </div>
             </div>

@@ -17,9 +17,9 @@ const Home = () => {
       <Wanderlie />
       
       {/* Proud Member Section */}
-      <section className="proud-member-section section-padding">
+      <section className="proud-member-section">
         <div className="container">
-          <h2 className="section-title text-center mb-5">PROUD MEMBER OF</h2>
+          <h2 className="section-title text-center">PROUD MEMBER OF</h2>
           <div className="logo-flex">
             <div className="member-logo-item">
               <img src={abaLogo} alt="American Bus Association" />

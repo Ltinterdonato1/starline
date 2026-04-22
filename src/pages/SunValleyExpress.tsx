@@ -17,8 +17,7 @@ const SunValleyExpress = () => {
         <div className="container">
           <div className="info-box mb-5 text-center">
             <h3>Daily Scheduled Service</h3>
-            <p className="mt-3">Providing reliable daily transportation between Sun Valley and the Boise Airport.</p>
-            <p className="highlight-text mt-3">Reservations are REQUIRED and must be made at least 48 hours in advance.</p>
+            <p className="mt-3">Providing reliable daily transportation between Sun Valley and the Wood River Valley to the Boise Airport.</p>
           </div>
 
           <div className="pricing-banner bg-primary text-white rounded mb-5">
@@ -74,8 +73,10 @@ const SunValleyExpress = () => {
               </div>
             </div>
 
-            <div className="text-center mt-5" style={{ textAlign: 'center' }}>
-              <button className="btn btn-primary btn-lg" style={{ marginTop: '40px' }}>Book My Shuttle Now</button>
+            <div className="text-center mt-5" style={{ textAlign: 'center', marginTop: '80px' }}>
+              <a href="https://express.starlinecollection.com/?group=sunvalleyexpress" target="_blank" rel="noopener noreferrer">
+                <button className="btn btn-primary btn-lg">Book My Shuttle Now!</button>
+              </a>
             </div>
           </div>
         </div>
@@ -97,7 +98,7 @@ const SunValleyExpress = () => {
             </div>
             <div className="feature-card">
               <div className="feature-content">
-                <h3>Boise Airport (GEG)</h3>
+                <h3>Boise Airport (BOI)</h3>
                 <ul className="location-list">
                   <li><strong>Arrivals:</strong> Upper level, doors to Delta/United</li>
                   <li><strong>Departures:</strong> Ground level, near pillar #10</li>

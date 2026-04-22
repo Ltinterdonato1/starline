@@ -296,11 +296,11 @@ const WanderlieEvents = () => {
             >
               {upcomingEvents.map((event, index) => (
                 <div key={index} className="event-slide-item">
-                  <div className="feature-card event-card" style={{ textAlign: 'left', height: '100%', margin: '0 15px' }}>
-                    <div className="feature-image" style={{ aspectRatio: '1 / 1', height: 'auto' }}>
+                  <div className="feature-card event-card" style={{ textAlign: 'left', height: '100%', margin: '0 15px', display: 'flex', flexDirection: 'column' }}>
+                    <div className="feature-image" style={{ aspectRatio: '1 / 1', height: 'auto', flexShrink: 0 }}>
                       <img src={event.image} alt={event.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
-                    <div className="feature-content">
+                    <div className="feature-content" style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                       <div style={{ display: 'flex', gap: '15px', marginBottom: '15px' }}>
                         <div style={{ textAlign: 'center', borderRight: '1px solid #ddd', paddingRight: '15px' }}>
                           <p style={{ margin: 0, fontWeight: '700', color: '#c5a059', textTransform: 'uppercase', fontSize: '14px' }}>{event.month}</p>
@@ -318,7 +318,7 @@ const WanderlieEvents = () => {
                         <p className="mb-0"><strong>Price:</strong> {event.price}</p>
                       </div>
                       
-                      <button className="btn btn-gold" style={{ width: '100%' }}>Buy Tickets</button>
+                      <button className="btn btn-gold" style={{ width: '100%', marginTop: 'auto' }}>Buy Tickets</button>
                     </div>
                   </div>
                 </div>

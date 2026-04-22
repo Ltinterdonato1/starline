@@ -278,8 +278,7 @@ const VacationExpress = () => {
               </div>
             </div>
 
-            <div className="text-center mt-5">
-              <p className="highlight-text mb-3">Reservations Required</p>
+            <div className="text-center mt-5" style={{ textAlign: 'center', marginTop: '80px' }}>
               <a href="https://express.starlinecollection.com/?group=vacationexpress" target="_blank" rel="noopener noreferrer">
                 <button className="btn btn-primary btn-lg">Reserve Now!</button>
               </a>

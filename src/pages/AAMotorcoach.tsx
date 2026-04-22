@@ -77,8 +77,7 @@ const AAMotorcoach = () => {
               </div>
             </div>
 
-            <div className="text-center mt-5" style={{ textAlign: 'center' }}>
-              <p className="highlight-text mb-3">Reserve your seat for the next holiday weekend!</p>
+            <div className="text-center mt-5" style={{ textAlign: 'center', marginTop: '80px' }}>
               <a href="https://express.starlinecollection.com/?group=weekendexpress" target="_blank" rel="noopener noreferrer">
                 <button className="btn btn-primary btn-lg">Reserve Now!</button>
               </a>
