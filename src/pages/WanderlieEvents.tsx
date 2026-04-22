@@ -186,7 +186,7 @@ const WanderlieEvents = () => {
   return (
     <div className="company-page wanderlie-page">
       {/* Hero Section */}
-      <section className="company-hero" style={{ backgroundImage: `url(${heroImg})`, height: '70vh', backgroundPosition: 'center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundColor: '#000' }}>
+      <section className="company-hero" style={{ backgroundImage: `url(${heroImg})`, height: '70vh', backgroundPosition: 'center', backgroundSize: 'cover', backgroundAttachment: 'scroll', backgroundColor: '#000' }}>
       </section>
 
       {/* Adventure Mission Section */}
