@@ -186,7 +186,7 @@ const WanderlieEvents = () => {
   return (
     <div className="company-page wanderlie-page">
       {/* Hero Section */}
-      <section className="company-hero" style={{ backgroundImage: `url(${heroImg})`, height: '70vh', backgroundPosition: 'center' }}>
+      <section className="company-hero" style={{ backgroundImage: `url(${heroImg})`, height: '70vh', backgroundPosition: 'center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundColor: '#000' }}>
       </section>
 
       {/* Adventure Mission Section */}
@@ -275,7 +275,7 @@ const WanderlieEvents = () => {
               </ul>
             </div>
             <div className="image-content">
-              <img src={luxuryInterior} alt="Luxury Coach Interior" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 15px 40px rgba(0,0,0,0.2)' }} />
+              <img src={luxuryInterior} alt="Luxury Coach Interior" style={{ width: '100%', height: 'auto', maxHeight: '400px', objectFit: 'contain', borderRadius: '12px', boxShadow: '0 15px 40px rgba(0,0,0,0.2)' }} />
             </div>
           </div>
         </div>
