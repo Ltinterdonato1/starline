@@ -994,7 +994,7 @@
     font-size: 11px !important;
   }
 
-  /* About Us Mobile Specifics */
+  /* About Us & Careers Mobile Specifics */
   .company-page h1 {
     font-size: 28px !important;
   }
@@ -1012,22 +1012,55 @@
     gap: 30px !important;
   }
 
-  /* Specific 2-column sections for About page */
+  .text-content {
+    text-align: center !important;
+  }
+
+  /* Specific 2-column sections */
   #safety .split-layout, 
   #eco-friendly .split-layout,
-  .policy-grid {
+  .policy-grid,
+  .commitment-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 15px !important;
   }
 
-  #safety h3, #eco-friendly h3 {
-    font-size: 14px !important;
-    margin-bottom: 10px !important;
+  /* Careers Specific 3-column Gallery on Mobile */
+  .careers-page .gallery-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 8px !important;
   }
 
-  .white-list li, .location-list li {
+  .careers-page .gallery-item {
+    height: 80px !important;
+  }
+
+  .commitment-card {
+    padding: 15px 10px !important;
+  }
+
+  .commitment-card h3 {
+    font-size: 12px !important;
+  }
+
+  .gallery-item {
+    height: 150px !important;
+  }
+
+  #safety h3, #eco-friendly h3, .text-content h3, .company-page h2 {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+
+  .white-list li, .location-list li, .mini-feature-list li {
     font-size: 11px !important;
     margin-bottom: 5px !important;
+  }
+
+  .mini-feature-list {
+    text-align: left !important;
+    display: inline-block !important;
   }
 
   .policy-card {

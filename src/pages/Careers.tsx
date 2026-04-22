@@ -11,7 +11,7 @@ const busGallery = [lraeHopkins, marryImg, skittlesImg];
 
 const Careers = () => {
   return (
-    <div className="company-page">
+    <div className="company-page careers-page">
       <section className="company-hero dynamic-hero" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${careersHero})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '400px' }}>
       </section>
 
@@ -25,12 +25,12 @@ const Careers = () => {
           </div>
 
           <div className="split-layout mb-5">
-            <div className="text-content">
+            <div className="text-content text-center">
               <h2>Meet Our Team</h2>
               <p className="mb-4">At Starline, we're more than just a transportation company—we're a family. Our team members are the heart of our operation, dedicated to providing the best experience for our passengers every single day.</p>
-              <div className="info-box bg-light text-left">
-                <h3>Our Values</h3>
-                <ul className="mini-feature-list mt-3">
+              <div className="info-box bg-light text-center">
+                <h3 className="mb-3">Our Values</h3>
+                <ul className="mini-feature-list" style={{ display: 'inline-block', textAlign: 'left', listStyle: 'none', paddingLeft: 0 }}>
                   <li><strong>Safety:</strong> Our #1 priority in everything we do.</li>
                   <li><strong>Service:</strong> Going above and beyond for our clients.</li>
                   <li><strong>Teamwork:</strong> Supporting each other to achieve excellence.</li>
@@ -40,11 +40,11 @@ const Careers = () => {
             </div>
             <div className="team-image-container" style={{ marginTop: '40px' }}>
               <img src={teamPhoto} alt="Starline Team" className="team-photo" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
-              <div className="photo-caption">The Starline Collection Team</div>
+              <div className="photo-caption" style={{ textAlign: 'center' }}>The Starline Collection Team</div>
             </div>
           </div>
 
-          <div className="info-box mb-5">
+          <div className="info-box mb-5 text-center">
             <h3>Award-Winning Benefits</h3>
             <p className="mb-4">We are proud to offer the <strong>highest driver pay and benefits</strong> in the region. Join us and become one of the nation’s highest-paid motorcoach drivers.</p>
             <div className="commitment-grid mt-4">
